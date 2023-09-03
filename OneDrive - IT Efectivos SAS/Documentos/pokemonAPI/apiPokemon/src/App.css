@@ -1,0 +1,112 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.pokemon-card {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 200px;
+  background-color: #f5f5f5;
+  position: relative; /* Agregamos posición relativa para que los elementos internos sean posicionados con respecto a esta tarjeta */
+
+  /* Agregamos un fondo de imagen */
+  background-image: url("URL_DE_TU_IMAGEN_DE_FONDO.jpg"); /* Reemplaza URL_DE_TU_IMAGEN_DE_FONDO.jpg con la URL de tu imagen de fondo */
+  background-size: cover; /* Escalamos la imagen de fondo para que cubra toda la tarjeta */
+  background-repeat: no-repeat; /* Evitamos que la imagen de fondo se repita */
+  background-position: center; /* Centramos la imagen de fondo */
+}
+
+.pokemon-container {
+  display: flex; /* Utilizamos flexbox para mostrar los Pokémon en una fila */
+  flex-wrap: wrap; /* Permite que los Pokémon se envuelvan a la siguiente línea si no caben en la pantalla */
+  gap: 20px; /* Espacio entre los Pokémon */
+  
+}
+
+.pokemon-card {
+  text-align: center; /* Centra el contenido en cada tarjeta */
+  padding: 10px; /* Espacio interno en cada tarjeta */
+  width: 200px; /* Ancho de cada tarjeta */
+  background-color: transparent; /* Fondo transparente para cada tarjeta */
+  display: inline-block; /* Hace que las tarjetas floten una al lado de la otra */
+  margin: 10px; /* Espacio entre las tarjetas */
+  vertical-align: top; /* Alinea las tarjetas en la parte superior */
+  border: 0;
+}
+
+.logoPokemon {
+  text-align: center;
+  margin-bottom: 20px; /* Espacio entre el título y las tarjetas de Pokémon */
+}
+
+.logoPokemon img {
+  width: 200px; /* Ancho de la imagen "Pokemon" */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
+.inputSearch  {
+  font-size: 24px; /* Tamaño de fuente del título */
+  margin-top: 20px; /* Espacio superior del título */
+  margin-bottom: 30px;
+   /* Esquinas redondeadas */
+   border-top-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+ 
+   /* Esquina superior derecha en punta */
+   border-top-right-radius: 0;
+   transform: skewX(-20deg);
+ 
+   /* Esquina inferior izquierda en punta */
+   border-bottom-left-radius: 0;
+   transform: skewX(20deg);
+   
+   text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 200px;
+  background-color: #f5f5f5;
+  position: relative;
+  
+}
+.loadingPokebola{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.loadingPokebola img{
+  width: 50px; /* Ancho de la imagen "Pokemon" */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
+body{
+  background-color: black;
+  /* background-image: url('./img/Fondo.png'); */
+  font-family: 'Roboto', sans-serif;
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+  background-position: center center;
+
+
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .pokemon-container {
+    flex-direction: column; /* Cambia la dirección de flexbox a columna */
+  }
+
+  .pokemon-card {
+    width: calc(33.33% - 20px); /* Ajusta el ancho para que haya tres tarjetas por fila */
+  }
+
+  .pokemon-title {
+    display: inline-block; /* Coloca el título y el buscador en línea */
+  }
+
+  .inputSearch {
+    width: calc(66.67% - 20px); /* Ajusta el ancho del buscador */
+    margin-left: 20px; /* Agrega un margen izquierdo para separar el buscador del título */
+  }
+}
