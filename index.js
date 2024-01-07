@@ -7,14 +7,14 @@ const app = express();
 const cors = require('cors');
 require('dotenv').config();
 
-app.use(cors())
+//app.use(cors())
 
-// const corsOptions = {
-//     origin: 'peluqueria-riht-k6axvqfej-jzpoe.vercel.app',
-//     credentials: true,
-//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-//     allowedHeaders: 'Content-Type,Authorization',
-//   };
+const corsOptions = {
+    origin: 'https://peluqueria-riht.vercel.app',
+    credentials: true,
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: 'Content-Type,Authorization',
+  };
 
 // app.use((req, res, next) => {
 //     res.append('Access-Control-Allow-Origin', ['*']);
