@@ -8,17 +8,17 @@ const cors = require('cors');
 require('dotenv').config();
 
 const corsOptions = {
-    origin: 'https://peluqueria-riht.vercel.app/sesion',
+    origin: 'https://peluqueria-riht.vercel.app',
     credentials: true,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type,Authorization',
 };
 
-app.use(cors(corsOptions));
+//app.use(cors(corsOptions));
 app.use(express.json());
 
-app.use(login);
-app.use(register);
+app.use(login, cors(corsOptions));
+app.use(register, cors(corsOptions));
 
 const port = process.env.PORT;
 
