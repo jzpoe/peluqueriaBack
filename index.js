@@ -7,29 +7,25 @@ const app = express();
 const cors = require('cors');
 require('dotenv').config();
 
-//app.use(cors())
-
 const corsOptions = {
     origin: 'https://peluqueria-riht.vercel.app',
     credentials: true,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type,Authorization',
 };
+
 app.use(cors(corsOptions));
-
-
 app.use(express.json());
-   
-app.options('*', cors(corsOptions));
+
 app.use(login);
 app.use(register);
 
-const port = process.env.PORT
+const port = process.env.PORT;
 
-app.get('/api', (req, res)=>{
-    res.send('bienvenido')
-} )
+app.get('/api', (req, res) => {
+    res.send('bienvenido');
+});
 
-app.listen(port, (req, res)=>{
+app.listen(port, () => {
     console.log(`escuchando en el puerto ${port}`);
-})
+});
