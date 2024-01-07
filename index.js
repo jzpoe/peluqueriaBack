@@ -8,7 +8,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const corsOptions = {
-    origin: 'https://peluqueria-riht.vercel.app',
+    origin: 'https://peluqueria-riht.vercel.app/sesion',
     credentials: true,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type,Authorization',
