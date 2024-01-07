@@ -15,11 +15,12 @@ const corsOptions = {
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type,Authorization',
 };
+app.use(cors(corsOptions));
 
-app.options('*', cors(corsOptions));
+
 app.use(express.json());
    
-
+app.options('*', cors(corsOptions));
 app.use(login);
 app.use(register);
 
