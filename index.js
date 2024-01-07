@@ -14,19 +14,9 @@ const corsOptions = {
     credentials: true,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type,Authorization',
-  };
+};
 
-// app.use((req, res, next) => {
-//     res.append('Access-Control-Allow-Origin', ['*']);
-//     res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-//     //res.append('Access-Control-Allow-Headers', 'Content-Type');
-
-//     next();
-// })
-  
-//   app.use(cors({
-//         origin:["peluqueria-riht-k6axvqfej-jzpoe.vercel.app"]
-//   }))
+app.options('*', cors(corsOptions));
 app.use(express.json());
    
 
