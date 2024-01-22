@@ -11,7 +11,8 @@ require('dotenv').config();
 app.use(cors())
 
 app.use(cors({
-    origin: ["https://peluqueria-riht-k6axvqfej-jzpoe.vercel.app"],
+    origin: ["https://peluqueria-riht.vercel.app"],
+    
     credentials: true,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type,Authorization',
