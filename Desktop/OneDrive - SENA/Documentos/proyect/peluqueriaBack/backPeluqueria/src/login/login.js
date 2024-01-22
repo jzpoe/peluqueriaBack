@@ -7,7 +7,7 @@ const { route } = require('../register/register');
 
 
 
-router.post('/sesion', async (req, res) => {
+router.post('/sesion',  async (req, res) => {
     try {
         const {name, email, password} = req.body
         const user = await registro.findOne({email})
